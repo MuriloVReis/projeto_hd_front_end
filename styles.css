@@ -1,3 +1,10 @@
+/* Importação da fontes no projeto */
+@font-face {
+    font-family: Quicksand-Light;
+    src: url(./fonts/Quicksand-Light.ttf);
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -9,32 +16,80 @@
     --color-dark: #222222;
     --color-orange: #ff6600;
     --color-red: #B11226;
+    --spacing-md: 30px;
+    --spacing-sm: 10px;
+    --spacing-lg: 50px;
 }
 
 html {
+    font-family: Quicksand-Light;
     scroll-behavior: smooth;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: var(--color-light);
+    font-weight: 800;
+    text-decoration: none;
+
+    &:hover{
+        color: var(--color-orange);
+    }
 }
 
 .hero {
     height: 100dvh;
-    background-image: linear-gradient( to bottom ,rgba(0, 0, 0, .8), rgba(0, 0, 0, .4)),
+    background-image: linear-gradient( to top ,rgba(0, 0, 0, .8), rgba(0, 0, 0, .4)),
     url(/Projeto-HD/images/motos/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
-    .header-hero{
-        background-color: aqua;
-
-        h1 {
-            color: var(--color-light);
-        }
-    }
 }
 
+ .header-hero{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--spacing-md);
+ }
 
+.nav-hero-menu {
+    display: flex;
+    gap: var(--spacing-md);
 
+}
+
+.cta {
+    min-height:calc(100dvh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    color: var(--color-light);
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 7vmin;
+    text-wrap: balance;
+}
+
+.cta p {
+    width: 60%;
+    text-wrap: balance;
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--color-light);
+}
 
 section {
     height: 100dvh;
